@@ -108,3 +108,14 @@ DataGridView.DataSource -> BindSource.DataSource -> DBContext.DataSetProperty
 DataGridView.DataSource -> DBContext.DataSetProperty
 
 #### Deleting data
+1. Get Id of item to delete, from UI SelectedItem;
+2. Find item in DBContext;
+3. Remove item from DBContext;
+4. Save changes to DB from DBContext;
+
+#### Updating data
+** Similar to deleting
+1. Get Id of item to delete, from UI SelectedItem;
+2. Find item in DBContext;
+3. ** Update properties of the item, using setter;
+4. Save changes to DB from DBContext;
