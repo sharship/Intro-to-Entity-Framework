@@ -65,8 +65,8 @@ Before incrementally change DB by Migration, you need to enable it in NuGet Pack
 1. Add an empty "Migration";
 2. Update new Up() method to insert data to DB;
 >public override void Up()
->{
->   Sql("INSERT INTO Status (Name) VALUES ('To Do');");
->   Sql("INSERT INTO Status (Name) VALUES ('In Progress');");
->   Sql("INSERT INTO Status (Name) VALUES ('Done');");
->}
+>.{
+>.   Sql("INSERT INTO Status (Name) VALUES ('To Do');");
+>.   Sql("INSERT INTO Status (Name) VALUES ('In Progress');");
+>.   Sql("INSERT INTO Status (Name) VALUES ('Done');");
+>.}
