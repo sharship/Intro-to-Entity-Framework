@@ -13,7 +13,7 @@
 - DBSet: Table
 
 4. CRUD operation
-- Add;
+- Create/Add;
 - Read/Get;
 - Update/Edit;
 - Delete;
@@ -85,3 +85,26 @@ Before incrementally change DB by Migration, you need to enable it in NuGet Pack
 2. Find the "Target migration" point, and Update database to that point:
 > PM> update-database -targetmigration "previous migration name"  
 
+## CRUD
+#### Reading data from DB
+1. Create an instanc of DBContext class (get an abstraction of DB);
+2. Get a "List" of Status from DB (read data into app class from DB abstraction);
+3. Populate the combo box (binding to UI)
+
+#### Creating data to DB
+1. Construct new instance of specific Class;
+2. Add to DBContext DataSet\<Class\> property;
+3. DBContext save changes, and push to DB;
+
+#### Data Binding from UI to DBContext
+1. Using BindingSource:
+DataGridView.DataSource -> BindSource.DataSource -> DBContext.DataSetProperty
+- 1) Create an instance of BindingSource;
+- 2) Query data from DBContext DataSet\<T\> property, using Linq sytax (working on IEnumerable);
+- 3) Set qery result from DBContext to BindingSource datasource;
+- 4) Set UI datasource to BindingSource;
+
+2. Binding UI directly to DBContext:
+DataGridView.DataSource -> DBContext.DataSetProperty
+
+#### Deleting data
