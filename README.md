@@ -57,5 +57,5 @@ Before incrementally change DB by Migration, you need to enable it in NuGet Pack
 3. Add a connection string to bring DB and App;
 4. Enable migration;
 5. Create classes in app (code first);
-6. Register in-app classes to DBContext as properties, using DbSet<T>;
+6. Register in-app classes to DBContext as properties, using DbSet\<T\>;
 7. Update DB;
