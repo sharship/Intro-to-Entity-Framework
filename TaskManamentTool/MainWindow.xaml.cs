@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using TaskManamentTool.Model;
 
 namespace TaskManamentTool
@@ -90,7 +79,7 @@ namespace TaskManamentTool
             // 3. Set Linq query result to BindingSource datasource
             binding.DataSource = queryTask2.ToList();
             // 4. Set UI datasource to BindingSource datasource
-            dg_Task.DataContext = binding;
+            dg_Task.DataSource = binding;
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
