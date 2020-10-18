@@ -75,3 +75,13 @@ Before incrementally change DB by Migration, you need to enable it in NuGet Pack
 - Check migrations that have been ran against DB:
 > PM> get-migrations
 
+- Delete: right-click to delete from "Migrations" folder;
+
+- Overwrite: If hasn't be ran against DB, add migration using the same migration name, marked with "-Force"
+> PM> add-migration "previous migration name" -Force
+
+- Roll-back:
+1. Get the list of migrations that have been applied;
+2. Find the "Target migration" point, and Update database to that point:
+> PM> update-database -targetmigration "previous migration name"  
+
