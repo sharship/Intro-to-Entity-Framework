@@ -52,10 +52,21 @@ Before incrementally change DB by Migration, you need to enable it in NuGet Pack
 > PM> update-database
 
 #### Step by step to implement EF
-1. Intall EF package;
-2. Create app-specific DBContext that inherits from DBContext;
-3. Add a connection string to bring DB and App;
-4. Enable migration;
+1. (Once) Intall EF package;
+2. (Once) Create app-specific DBContext that inherits from DBContext;
+3. (Once) Add a connection string to bring DB and App;
+4. (Once) Enable migration;
 5. Create classes in app (code first);
 6. Register in-app classes to DBContext as properties, using DbSet\<T\>;
-7. Update DB;
+7. Add migration to update class;
+8. Update DB;
+
+### Seed Data
+1. Add an empty "Migration";
+2. Update new Up() method to insert data to DB;
+>public override void Up()
+>{
+>   Sql("INSERT INTO Status (Name) VALUES ('To Do');");
+>   Sql("INSERT INTO Status (Name) VALUES ('In Progress');");
+>   Sql("INSERT INTO Status (Name) VALUES ('Done');");
+>}
