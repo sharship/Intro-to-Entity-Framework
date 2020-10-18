@@ -70,3 +70,8 @@ Before incrementally change DB by Migration, you need to enable it in NuGet Pack
     Sql("INSERT INTO Status (Name) VALUES ('In Progress');");  
     Sql("INSERT INTO Status (Name) VALUES ('Done');");  
 }  
+
+### Deleting, Overwriting & Rolling-back
+- Check migrations that have been ran against DB:
+> PM> get-migrations
+
