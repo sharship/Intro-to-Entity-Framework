@@ -33,3 +33,19 @@ Start with code class, and then by means of "migration" to create DB schema;
 - LINQ: Language Integrated Query, a ubiquitous way to query data from within your code (LINQ itself is NOT a persistence framework);
 - LINQ to SQL: Another Persistence Framework;
 - LINQ free us from data source (e.g. relational DB, XML etc) and query languages (e.g. SQL, XQuery etc);
+
+### Development
+#### Add SQL Server connection string
+- In Web app, add connection string in Web.config
+- In Forms app, add to app.config
+
+### NuGet Package Manager Console 
+Before incrementally change DB by Migration, you need to enable it in NuGet Package Manager Console first:
+> PM> Enable-Migrations
+
+* A new folder "Migrations" will be created automatically in project, and the plumbing of EF has been established.
+
+> PM> add-migration AddStatus
+* So far, a Migration.cs file has been added to Migrations folder;
+* Migration.cs file contains Up() and Down() methods;
+
