@@ -99,10 +99,10 @@ Before incrementally change DB by Migration, you need to enable it in NuGet Pack
 #### Data Binding from UI to DBContext
 1. Using BindingSource:
 DataGridView.DataSource -> BindSource.DataSource -> DBContext.DataSetProperty
-1) Create an instance of BindingSource;
-2) Query data from DBContext DataSet\<T\> property, using Linq sytax (working on IEnumerable);
-3) Set qery result from DBContext to BindingSource datasource;
-4) Set UI datasource to BindingSource;
+- 1) Create an instance of BindingSource;
+- 2) Query data from DBContext DataSet\<T\> property, using Linq sytax (working on - IEnumerable);
+- 3) Set qery result from DBContext to BindingSource datasource;
+- 4) Set UI datasource to BindingSource;
 
 2. Binding UI directly to DBContext:
 DataGridView.DataSource -> DBContext.DataSetProperty
